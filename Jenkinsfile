@@ -1,13 +1,20 @@
-pipeline { 
-   agent any
-
-   stages {
-   
-     stage('Install Dependencies') { 
-        steps { 
-           sh 'echo "success..."'
+pipeline {
+    agent any 
+    stages{
+        stage("clone"){
+            steps { 
+                
+            }    
         }
-     }
-     
-   }
+        stage("build"){
+            steps {
+                sh 'mvn package'
+            }
+        }
+        stage("deploy"){
+            steps {
+                
+            }
+        }  
+    }
 }
